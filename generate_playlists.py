@@ -32,7 +32,7 @@ REGION_MAP = {
     'in': 'India', 'jp': 'Japan', 'kr': 'South Korea', 'au': 'Australia'
 }
 
-TOP_REGIONS = ['United States', 'Canada', 'United Kingdom']
+TOP_REGIONS = ['Mexico', 'Argentina', 'Colombia']
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -428,7 +428,7 @@ def create_epg_xml(epg_data):
     return ET.ElementTree(root)
 
 def generate_tubi_m3u():
-    proxies = get_proxies("US")
+    proxies = get_proxies("mx")
     json_data = None
     if proxies:
         for proxy in proxies:
